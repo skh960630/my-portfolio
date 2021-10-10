@@ -1,23 +1,15 @@
-import './App.css';
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect } from 'react';
+import Dashboard from './components/Dashboard';
+import smoothscroll from 'smoothscroll-polyfill';
 
 function App() {
 
+  useEffect(() => {
+    smoothscroll.polyfill();
+  }, []);
+
   return (
-    <div className="container">
-      <div className="section one">
-        First Page
-      </div>
-      <div className="section two">
-        Second Page
-      </div>
-      <div className="section three">
-        Third Page
-      </div>
-      <div className="section four">
-        Fourth Page
-      </div>
-    </div>
+    <Dashboard />
   );
 }
 
