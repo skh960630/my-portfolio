@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Fader from '../Fader';
+import Fader from '../animations/Fader';
 
 const SkillsPage = (props) => {
 

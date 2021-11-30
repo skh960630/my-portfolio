@@ -1,6 +1,6 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from 'react';
 import PropTypes from 'prop-types';
-import '../App.css';
+import '../../App.css';
 
 import { TweenMax, Power3 } from 'gsap';
 
@@ -12,12 +12,16 @@ const Fader = ({ type, delay, text, y = 0 }) => {
             textItems,
             2,
             {
+                scrollTrigger: {
+                    trigger: textItems.current,
+                    toggleActions: 'restart reverse restart reverse',
+                },
                 y,
                 ease: Power3.easeOut,
                 delay,
                 opacity: 1,
             }
-        )
+        );
     }, []);
      
     return (
