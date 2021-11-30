@@ -43,12 +43,12 @@
   justify-content: center;
   align-items: center;
   color: white;
-  scroll-snap-align: start;
+  /* scroll-snap-align: start; */
 }
 
 .container {
-  scroll-snap-type: y mandatory;
-  overflow-y: scroll;
+  /* scroll-snap-type: y mandatory;
+  overflow-y: scroll; */
   height: 100vh;
 }
 
@@ -66,4 +66,17 @@
 
 .four{
   background: lightsalmon ;
+}
+
+.HeadText{
+  font-size: 4.5vh;
+  opacity: 0;
+}
+
+.intro-container {
+  display: flex;
+  position: relative;
+  height: 100vh;
+  width: 50vw;
+  align-items: center;
 }
