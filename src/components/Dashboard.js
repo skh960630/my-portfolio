@@ -47,7 +47,7 @@ const Dashboard = () => {
             if (nextY !== null) {
                 setCurrentSectionY(nextY);
                 setCurrentSection(nextSection);
-                window.scrollTo({ top: nextY });
+                window.scrollTo({ top: nextY, behavior: 'smooth' });
             }
         }
     }, [currentSectionY, setCurrentSectionY, scrollTrigger, currentSection, setCurrentSection]);
