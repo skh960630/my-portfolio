@@ -43,12 +43,9 @@
   justify-content: center;
   align-items: center;
   color: white;
-  /* scroll-snap-align: start; */
 }
 
 .container {
-  /* scroll-snap-type: y mandatory;
-  overflow-y: scroll; */
   height: 100vh;
 }
 
@@ -90,7 +87,7 @@
   position: absolute;
   height: 50vh;
   width: 50vw;
-  margin-left: 40%;
+  margin-left: 50%;
   margin-top: 30%;
   opacity: 0;
 }
