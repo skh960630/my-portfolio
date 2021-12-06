@@ -10,12 +10,17 @@ const Dashboard = () => {
     const [currentSection, setCurrentSection] = useState(1);
     const [currentSectionY, setCurrentSectionY] = useState(0);
     const [scrollTrigger, setScrollTrigger] = useState(null);
+    const [progress, setProgress] = useState(0);
 
     useEffect(() => {
         setScrollTrigger(document.getElementById('sectionTwo').offsetTop * 0.05);
         window.scrollTo({ top: 0 });
         document.body.style.overflow = "hidden";
     }, []);
+
+    useEffect(() => {
+        setProgress((currentSection-1)*25);
+    }, [currentSection]);
 
     // Check if the page needs to be switched
     const checkScroll = useCallback((event) => {
@@ -65,7 +70,7 @@ const Dashboard = () => {
 
     return (
         <div className="container">
-            <ProgressBar progress="50" />
+            <ProgressBar progress={progress} />
             <div id='sectionOne' className="section one">
                 <IntroductionPage />
             </div>
