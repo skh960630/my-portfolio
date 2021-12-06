@@ -3,15 +3,15 @@ import IntroductionPage from './sections/IntroductionPage';
 import SkillsPage from './sections/SkillsPage';
 import ProjectPage from './sections/ProjectPage';
 import ContactPage from './sections/ContactPage';
+import ProgressBar from './animations/ProgressBar';
 import '../App.css';
 
 const Dashboard = () => {
     const [currentSection, setCurrentSection] = useState(1);
-    const [currentSectionY, setCurrentSectionY] = useState(null);
-    const [scrollTrigger, setScrollTrigger] = useState(100);
+    const [currentSectionY, setCurrentSectionY] = useState(0);
+    const [scrollTrigger, setScrollTrigger] = useState(null);
 
     useEffect(() => {
-        setCurrentSectionY(0);
         setScrollTrigger(document.getElementById('sectionTwo').offsetTop * 0.05);
         window.scrollTo({ top: 0 });
         document.body.style.overflow = "hidden";
@@ -43,12 +43,12 @@ const Dashboard = () => {
                     nextY = document.getElementById('sectionFour').offsetTop;
                     break;
             }
-
-            if (nextY !== null) {
-                setCurrentSectionY(nextY);
-                setCurrentSection(nextSection);
-                window.scrollTo({ top: nextY, behavior: 'smooth' });
-            }
+            console.log(nextY);
+            console.log(event.deltaY);
+            
+            setCurrentSectionY(nextY);
+            setCurrentSection(nextSection);
+            window.scrollTo({ top: nextY, behavior: 'smooth' });
         }
     }, [currentSectionY, setCurrentSectionY, scrollTrigger, currentSection, setCurrentSection]);
 
@@ -65,6 +65,7 @@ const Dashboard = () => {
 
     return (
         <div className="container">
+            <ProgressBar progress="50" />
             <div id='sectionOne' className="section one">
                 <IntroductionPage />
             </div>
