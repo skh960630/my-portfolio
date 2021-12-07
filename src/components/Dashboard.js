@@ -7,6 +7,7 @@ import ProgressBar from './animations/ProgressBar';
 import '../App.css';
 
 const Dashboard = () => {
+    const [windowHeight, setWindowHeight] = useState(window.innerHeight);
     const [currentSection, setCurrentSection] = useState(1);
     const [currentHeight, setCurrentHeight] = useState(0);
     const [scrollTrigger, setScrollTrigger] = useState(0);
@@ -19,14 +20,43 @@ const Dashboard = () => {
     }, []);
 
     useEffect(() => {
-        setProgress((currentSection-1)*25);
+        setProgress((currentSection-1)*33+1);
     }, [currentSection]);
+
+    // Reset the location when there is a window size change
+    const handleResize = () => {
+        if (windowHeight !== window.innerHeight) {
+            let offsetTop = null;
+
+            switch (currentSection) {
+                case 1:
+                    offsetTop = document.getElementById('sectionOne').offsetTop;
+                    break;
+                case 2:
+                    offsetTop = document.getElementById('sectionTwo').offsetTop;
+                    break;
+                case 3:
+                    offsetTop = document.getElementById('sectionThree').offsetTop;
+                    break;
+                case 4:
+                    offsetTop = document.getElementById('sectionFour').offsetTop;
+                    break;
+            }
+
+            setCurrentHeight(offsetTop);
+            setScrollTrigger(0);
+            setWindowHeight(window.innerHeight);
+
+            window.scrollTo({ top: offsetTop });
+        }
+    }
 
     // Check if the page needs to be switched
     const checkScroll = (event) => {
         if (!moving) {
             // Make the scroll slower
             const scrollTo = document.documentElement.scrollTop+(event.deltaY/20);
+
             window.scrollTo({ top: scrollTo });
             setScrollTrigger(scrollTo-currentHeight);
             setMoving(true);
@@ -70,13 +100,13 @@ const Dashboard = () => {
     // Manually change scroll event
     useEffect(() => {
         window.addEventListener('wheel', checkScroll, { passive: true });
-        // window.addEventListener('resize', );
+        window.addEventListener('resize', handleResize);
           
         return () => {
             window.removeEventListener('wheel', checkScroll);
-            // window.removeEventListener('resize', );
+            window.removeEventListener('resize', handleResize);
         }
-    }, [moving, scrollTrigger]);
+    }, [moving, scrollTrigger, currentHeight]);
 
     return (
         <div className="container">
