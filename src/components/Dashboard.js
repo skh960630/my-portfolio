@@ -115,10 +115,10 @@ const Dashboard = () => {
                 <IntroductionPage />
             </div>
             <div id='sectionTwo' className="section two">
-                <SkillsPage />
+                <ProjectPage />
             </div>
             <div id='sectionThree' className="section three">
-                <ProjectPage />
+                <SkillsPage />
             </div>
             <div id='sectionFour' className="section four">
                 <ContactPage />

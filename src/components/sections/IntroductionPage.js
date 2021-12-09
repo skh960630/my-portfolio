@@ -1,7 +1,8 @@
 import React from 'react';
 import Fader from '../animations/Fader';
 import SvgItem from '../animations/SvgItem';
-import '../../App.css';
+
+import './Sections.css';
 
 const IntroductionPage = (props) => {
     return (
