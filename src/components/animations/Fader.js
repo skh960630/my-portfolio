@@ -13,8 +13,8 @@ const Fader = ({ type, delay, text, y = 0 }) => {
             2,
             {
                 scrollTrigger: {
-                    trigger: textItems.current,
-                    toggleActions: 'restart reverse restart reverse',
+                    trigger: '.'+textItems.className,
+                    toggleActions: 'restart reset restart reset',
                 },
                 y,
                 ease: Power3.easeOut,

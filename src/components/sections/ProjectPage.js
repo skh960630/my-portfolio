@@ -8,7 +8,7 @@ const ProjectPage = (props) => {
     return (
         <div>
             <div className='title dark-text'>
-                <Fader text="Experience" type="Subhead" delay={0.3} />
+                <Fader text="Experience" type="Subhead" delay={1} />
             </div>
             <div>
 

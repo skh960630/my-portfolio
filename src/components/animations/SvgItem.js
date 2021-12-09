@@ -12,8 +12,8 @@ const SvgItem = ({ delay, y }) => {
             2,
             {
                 scrollTrigger: {
-                    trigger: svgImage.current,
-                    toggleActions: 'restart reverse restart reverse',
+                    trigger: '.'+svgImage.className,
+                    toggleActions: 'restart reset restart reset',
                 },
                 y,
                 ease: Power3.easeOut,
