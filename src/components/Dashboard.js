@@ -88,7 +88,7 @@ const Dashboard = () => {
                 window.scrollTo({ top: nextY, behavior: 'smooth' });
                 setTimeout(() => {
                     setMoving(false);
-                }, 1000);
+                }, 2000);
             } else {
                 setTimeout(() => {
                     setMoving(false);

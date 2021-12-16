@@ -4,7 +4,7 @@ import '../../App.css';
 
 import { TweenMax, Power3 } from 'gsap';
 
-const Fader = ({ type, delay, text, y = 0 }) => {
+const FadeText = ({ type, delay, text, y = 0 }) => {
     let textItems = useRef(null);
 
     useEffect(() => {
@@ -31,11 +31,4 @@ const Fader = ({ type, delay, text, y = 0 }) => {
     )
 }
 
-Fader.defaultProps = {
-    text: 'Hello World!'
-}
-Fader.propTypes = {
-    text: PropTypes.string,
-}
-
-export default Fader;
+export default FadeText;

@@ -1,0 +1,25 @@
+.Experience-Card {
+    width: 40vh;
+    height: 50vh;
+    opacity: 1;
+}
+
+.Card-title {
+    font-size: 5vh;
+    width: 100%;
+    height: 20%;
+    background-color: chocolate;
+    color: white;
+    border-radius: 25px 25px 0px 0px;
+    box-shadow: 5px 5px #888888;
+}
+
+.content {
+    font-size: 2vh;
+    width: 100%;
+    height: 80%;
+    background-color: white;
+    color: black;
+    border-radius: 0px 0px 25px 25px;
+    box-shadow: 5px 5px #888888;
+}

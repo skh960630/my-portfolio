@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Fader from '../animations/Fader';
+import FadeText from '../fades/FadeText';
 
 const ContactPage = (props) => { 
 
