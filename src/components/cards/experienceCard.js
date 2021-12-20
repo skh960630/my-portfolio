@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cards.css'
 
-const experienceCard = () => {
+const ExperienceCard = () => {
     return (
         <div className='Experience-Card'>
             <div className="Card-title">
@@ -14,4 +14,4 @@ const experienceCard = () => {
     )
 }
 
-export default experienceCard;
+export default ExperienceCard;

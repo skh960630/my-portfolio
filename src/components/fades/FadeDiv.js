@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from 'react';
-import PropTypes from 'prop-types';
 
 import { TweenMax, Power3 } from 'gsap';
 
@@ -25,7 +24,12 @@ const FadeDiv = ({ delay, children, y = 0 }) => {
 
     return (
         <>
-            <div className="divItem" ref={el => {divItems = el}}>{children}</div>
+            <div 
+                className="divItem" 
+                style={{ opacity: 0 }} 
+                ref={el => {divItems = el}}>
+                {children}
+            </div>
         </>
     )
 }
