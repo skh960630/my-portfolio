@@ -1,14 +1,20 @@
 import React from 'react';
 import './Cards.css'
 
-const ExperienceCard = () => {
+const ExperienceCard = ({ title, line1, line2, line3 }) => {
     return (
         <div className='Experience-Card'>
             <div className="Card-title">
-                Title
+                <div style={{ paddingLeft: '2%', paddingTop: '3%' }}>
+                    {title}
+                </div>
             </div>
             <div className="content">
-                Content
+                <div style={{ padding: '2%' }}>
+                    {line1}
+                    {line2}
+                    {line3}
+                </div>
             </div>
         </div>
     )

@@ -26,7 +26,6 @@ const FadeDiv = ({ delay, children, y = 0 }) => {
         <>
             <div 
                 className="divItem" 
-                style={{ opacity: 0 }} 
                 ref={el => {divItems = el}}>
                 {children}
             </div>
