@@ -1,0 +1,19 @@
+.HeadText {
+    font-size: 7.5vh;
+    opacity: 0;
+}
+
+.BodyText {
+font-size: 5.5vh;
+opacity: 0;
+}
+
+.ProjectSubheadText {
+font-size: 6.5vh;
+opacity: 0;
+}
+
+.SkillsSubheadText {
+font-size: 6.5vh;
+opacity: 0;
+}

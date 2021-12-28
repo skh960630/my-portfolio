@@ -1,10 +1,16 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import FadeText from '../fades/FadeText';
+
+import './Sections.css';
 
 const SkillsPage = (props) => {
 
     return (
-        <div>Second Page</div>
+        <div style={{ width: '80vw' }}>
+            <div className='title'>
+                <FadeText text="Skills" type="SkillsSubhead" delay={1} />
+            </div>
+        </div>
     );
 }
 

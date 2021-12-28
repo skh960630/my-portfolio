@@ -58,24 +58,9 @@
 }
 
 .three{
-  background: rgb(67, 91, 175);
+  background: rgb(255, 77, 77);
 }
 
 .four{
   background: lightsalmon ;
-}
-
-.HeadText {
-  font-size: 7.5vh;
-  opacity: 0;
-}
-
-.BodyText {
-  font-size: 5.5vh;
-  opacity: 0;
-}
-
-.SubheadText {
-  font-size: 6.5vh;
-  opacity: 0;
 }
