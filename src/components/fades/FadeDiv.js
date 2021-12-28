@@ -11,7 +11,7 @@ const FadeDiv = ({ delay, children, y = 0 }) => {
             2,
             {
                 scrollTrigger: {
-                    trigger: "divItem",
+                    trigger: ".divItem",
                     toggleActions: 'restart reset restart reset',
                 },
                 y,

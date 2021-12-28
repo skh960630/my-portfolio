@@ -11,10 +11,10 @@ const ProjectPage = () => {
     return (
         <div style={{ width: '80vw' }}>
             <div className='title dark-text'>
-                <FadeText text="Experience" type="ProjectSubhead" delay={1} />
+                <FadeText text="Experience" type="ProjectSubhead" delay={0.8} />
             </div>
             <div style={{ marginTop: '15vh' }}>
-                <FadeDiv delay={3} y='-10vh'>
+                <FadeDiv delay={1.5} y='-10vh'>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <ExperienceCard 
                             title="Work experience in random company"
@@ -36,7 +36,7 @@ const ProjectPage = () => {
                         />
                     </div>
                 </FadeDiv>
-                <FadeDiv delay={3.5} y='-10vh'>
+                <FadeDiv delay={2} y='-10vh'>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <ExperienceCard 
                             title="Work experience in random company"
