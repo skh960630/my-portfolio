@@ -9,7 +9,6 @@ const FadeText = ({ type, delay, text, y = 0 }) => {
     useEffect(() => {
         TweenMax.to(
             textItems,
-            2,
             {
                 scrollTrigger: {
                     trigger: '.'+textItems.className,

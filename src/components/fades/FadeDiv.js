@@ -8,7 +8,6 @@ const FadeDiv = ({ delay, children, y = 0 }) => {
     useEffect(() => {
         TweenMax.to(
             divItems,
-            2,
             {
                 scrollTrigger: {
                     trigger: ".divItem",
