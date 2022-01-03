@@ -4,7 +4,7 @@ import SvgItem from '../animations/SvgItem';
 
 import './Sections.css';
 
-const IntroductionPage = (props) => {
+const IntroductionPage = () => {
     return (
         <div className='intro-container'>
             <div style={{ display: 'block' }}>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import ExperienceCard from '../cards/ExperienceCard';
+import ExperienceCard from '../contents/ExperienceCard';
 import FadeText from '../fades/FadeText';
 import FadeDiv from '../fades/FadeDiv';
 import FadeUnderline from '../fades/FadeUnderline';
