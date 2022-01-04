@@ -2,7 +2,7 @@ import React, { useEffect, useRef } from 'react';
 
 import { TweenMax, Power3 } from 'gsap';
 
-const FadeDiv = ({ delay, children, y = 0 }) => {
+const FadeDiv = ({ delay, children, y = 0, className }) => {
     let divItems = useRef(null);
 
     useEffect(() => {
@@ -10,7 +10,7 @@ const FadeDiv = ({ delay, children, y = 0 }) => {
             divItems,
             {
                 scrollTrigger: {
-                    trigger: ".divItem",
+                    trigger: `.${className}`,
                     toggleActions: 'restart reset restart reset',
                 },
                 y,
@@ -24,7 +24,7 @@ const FadeDiv = ({ delay, children, y = 0 }) => {
     return (
         <>
             <div 
-                className="divItem" 
+                className={className} 
                 ref={el => {divItems = el}}>
                 {children}
             </div>

@@ -17,7 +17,7 @@ const ProjectPage = () => {
                 </FadeUnderline>
             </div>
             <div style={{ marginTop: '15vh' }}>
-                <FadeDiv delay={2} y='-10vh'>
+                <FadeDiv delay={2} y='-10vh' className='divProject'>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <ExperienceCard 
                             title="Work experience in random company"
@@ -39,7 +39,7 @@ const ProjectPage = () => {
                         />
                     </div>
                 </FadeDiv>
-                <FadeDiv delay={2.5} y='-10vh'>
+                <FadeDiv delay={2.5} y='-10vh' className='divProject'>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <ExperienceCard 
                             title="Work experience in random company"

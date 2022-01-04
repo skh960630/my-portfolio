@@ -18,6 +18,14 @@
     opacity: 0;
 }
 
+.divProject {
+    opacity: 0;
+}
+
+.divSkill {
+    opacity: 0;
+}
+
 .ProjectUnderline {
     background-image: linear-gradient(transparent 80%, #ffce0a 20%);
     background-size: 0% 100%;
