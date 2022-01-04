@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cards.css'
+import './Contents.css';
 
 const ExperienceCard = ({ title, line1, line2, line3 }) => {
     return (

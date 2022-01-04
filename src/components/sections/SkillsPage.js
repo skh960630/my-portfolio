@@ -16,10 +16,13 @@ const SkillsPage = () => {
                 </FadeUnderline>
             </div>
             <div className='skills-container'>
-                <SkillBar name="Java" gauge={90} />
-                <SkillBar name="html/css" gauge={90} />
-                <SkillBar name="React.js" gauge={90}/>
-                <SkillBar name="Node.js" gauge={50} />
+                <SkillBar name="JAVA" gauge={90} />
+                <SkillBar name="JAVASCRIPT" gauge={90} />
+                <SkillBar name="HTML/CSS" gauge={80} />
+                <SkillBar name="REACT.JS" gauge={80}/>
+                <SkillBar name="GIT" gauge={40} />
+                <SkillBar name="NODE.JS" gauge={40} />
+                <SkillBar name="PYTHON" gauge={30} />
             </div>
         </div>
     );

@@ -1,20 +1,20 @@
 .HeadText {
-    font-size: 7.5vh;
+    font-size: 4.5vw;
     opacity: 0;
 }
 
 .BodyText {
-    font-size: 5.5vh;
+    font-size: 3.5vw;
     opacity: 0;
 }
 
 .ProjectSubheadText {
-    font-size: 6.5vh;
+    font-size: 3.5vw;
     opacity: 0;
 }
 
 .SkillsSubheadText {
-    font-size: 6.5vh;
+    font-size: 3.5vw;
     opacity: 0;
 }
 
