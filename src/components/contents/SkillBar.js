@@ -3,9 +3,6 @@ import React from 'react';
 import './Contents.css';
 
 const SkillBar = ({ name, gauge }) => {
-    console.log(name);
-    console.log(gauge);
-    console.log(100-gauge);
     const gaugeBar = {
         width: `${gauge}%`,
         height: '100%',

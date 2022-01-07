@@ -12,6 +12,7 @@ const Dashboard = () => {
     const [currentHeight, setCurrentHeight] = useState(0);
     const [scrollTrigger, setScrollTrigger] = useState(0);
     const [progress, setProgress] = useState(0);
+    const [progressColor, setProgressColor] = useState({ barColor: "whitesmoke", backgroundColor: "#A9A9A9" });
     const [moving, setMoving] = useState(false);
 
     useEffect(() => {
@@ -69,15 +70,19 @@ const Dashboard = () => {
                 switch (nextSection) {
                     case 1:
                         nextY = document.getElementById('sectionOne').offsetTop;
+                        setProgressColor({ barColor: "whitesmoke", backgroundColor: "#A9A9A9" });
                         break;
                     case 2:
                         nextY = document.getElementById('sectionTwo').offsetTop;
+                        setProgressColor({ barColor: "#505050", backgroundColor: "#A9A9A9" });
                         break;
                     case 3:
                         nextY = document.getElementById('sectionThree').offsetTop;
+                        setProgressColor({ barColor: "whitesmoke", backgroundColor: "#A9A9A9" });
                         break;
                     case 4:
                         nextY = document.getElementById('sectionFour').offsetTop;
+                        setProgressColor({ barColor: "#505050", backgroundColor: "#A9A9A9" });
                         break;
                 }
 
@@ -110,7 +115,7 @@ const Dashboard = () => {
 
     return (
         <div className="container">
-            <ProgressBar progress={progress} />
+            <ProgressBar progress={progress} progressColor={progressColor} />
             <div id='sectionOne' className="section one">
                 <IntroductionPage />
             </div>

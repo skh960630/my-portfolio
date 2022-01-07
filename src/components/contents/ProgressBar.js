@@ -1,11 +1,11 @@
 import React from 'react';
 
-const ProgressBar = ({ progress }) => {
+const ProgressBar = ({ progress, progressColor }) => {
     const parentBar = {
         position: 'fixed',
         height: '30vh',
         width: 10,
-        backgroundColor: 'whitesmoke',
+        backgroundColor: progressColor.backgroundColor,
         borderRadius: 40,
         marginLeft: '95vw',
         marginTop: '30vh',
@@ -14,7 +14,7 @@ const ProgressBar = ({ progress }) => {
     const childBar = {
         height: `${progress}%`,
         width: '100%',
-        backgroundColor: "#99ccff",
+        backgroundColor: progressColor.barColor,
         borderRadius: 40,
         textAlign: 'right',
     }
