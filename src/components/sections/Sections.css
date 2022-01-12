@@ -21,6 +21,21 @@
     margin: auto;
 }
 
+.namecard-container {
+    height: 35vh;
+    width: 35vw;
+    margin: auto;
+    margin-top: 10vh;
+    background-color: rgb(27, 27, 27);
+}
+
+.vertical-line {
+    border-left: 5px solid #ffce0a;
+    height: 35vh;
+    position: absolute;
+    left: 70vh;
+}
+
 .title {
     margin-top: 10vh;
     text-align: left;

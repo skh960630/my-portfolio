@@ -18,6 +18,11 @@
     opacity: 0;
 }
 
+.ContactSubheadText {
+    font-size: 3.5vw;
+    opacity: 0;
+}
+
 .divProject {
     opacity: 0;
 }
@@ -33,6 +38,12 @@
 }
 
 .SkillsUnderline {
+    background-image: linear-gradient(transparent 80%, #ffce0a 20%);
+    background-size: 0% 100%;
+    background-repeat: no-repeat;
+}
+
+.ContactUnderline {
     background-image: linear-gradient(transparent 80%, #ffce0a 20%);
     background-size: 0% 100%;
     background-repeat: no-repeat;

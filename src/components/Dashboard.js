@@ -82,7 +82,7 @@ const Dashboard = () => {
                         break;
                     case 4:
                         nextY = document.getElementById('sectionFour').offsetTop;
-                        setProgressColor({ barColor: "#505050", backgroundColor: "#A9A9A9" });
+                        setProgressColor({ barColor: "#ffce0a", backgroundColor: "#A9A9A9" });
                         break;
                 }
 
