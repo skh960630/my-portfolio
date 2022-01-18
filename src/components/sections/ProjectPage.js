@@ -20,19 +20,13 @@ const ProjectPage = () => {
                 <FadeDiv delay={2} y='-10vh' className='divProject'>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <ExperienceCard 
-                            title="Work experience in random company"
+                            title="Life Skills Group - Frontend Internship"
                             line1="Work experience in random company"
                             line2="Work experience in random company"
                             line3="Work experience in random company"
                         />
                         <ExperienceCard 
-                            title="Work experience in random company"
-                            line1="Work experience in random company"
-                            line2="Work experience in random company"
-                            line3="Work experience in random company"
-                        />
-                        <ExperienceCard 
-                            title="Work experience in random company"
+                            title="My Portfolio Project"
                             line1="Work experience in random company"
                             line2="Work experience in random company"
                             line3="Work experience in random company"
@@ -42,19 +36,19 @@ const ProjectPage = () => {
                 <FadeDiv delay={2.5} y='-10vh' className='divProject'>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <ExperienceCard 
-                            title="Work experience in random company"
+                            title="Barter Service Website Project"
                             line1="Work experience in random company"
                             line2="Work experience in random company"
                             line3="Work experience in random company"
                         />
                         <ExperienceCard 
-                            title="Work experience in random company"
+                            title="ACM ICPC Competition"
                             line1="Work experience in random company"
                             line2="Work experience in random company"
                             line3="Work experience in random company"
                         />
                         <ExperienceCard 
-                            title="Work experience in random company"
+                            title="ITS Internship Program"
                             line1="Work experience in random company"
                             line2="Work experience in random company"
                             line3="Work experience in random company"

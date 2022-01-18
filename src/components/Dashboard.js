@@ -63,7 +63,7 @@ const Dashboard = () => {
             setMoving(true);
 
             // Move to next slide if the scroll is at a certain point
-            if (document.documentElement.scrollTop > 0 && Math.abs(scrollTrigger) > 80) {
+            if (document.documentElement.scrollTop > 0 && Math.abs(scrollTrigger) > 40) {
                 const nextSection = scrollTrigger > 0 ? currentSection + 1 : currentSection - 1;
 
                 let nextY = null;
@@ -97,7 +97,7 @@ const Dashboard = () => {
             } else {
                 setTimeout(() => {
                     setMoving(false);
-                }, 50);
+                }, 40);
             }
         }
     };

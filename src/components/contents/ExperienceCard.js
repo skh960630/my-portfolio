@@ -5,15 +5,19 @@ const ExperienceCard = ({ title, line1, line2, line3 }) => {
     return (
         <div className='Experience-Card'>
             <div className="Card-title">
-                <div style={{ paddingLeft: '2%', paddingTop: '3%' }}>
-                    {title}
-                </div>
+                {title}
             </div>
             <div className="content">
                 <div style={{ padding: '2%' }}>
-                    {line1}
-                    {line2}
-                    {line3}
+                    <div>
+                        {line1}
+                    </div>
+                    <div>
+                        {line2}
+                    </div>
+                    <div>
+                        {line3}
+                    </div>
                 </div>
             </div>
         </div>
