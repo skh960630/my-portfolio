@@ -22,18 +22,32 @@
 }
 
 .namecard-container {
-    height: 35vh;
+    min-width: 700px;
+    min-height: 400px;
+    max-width: 1400px;
+    max-height: 800px;
     width: 35vw;
+    height: 20vw;
     margin: auto;
-    margin-top: 10vh;
-    background-color: rgb(27, 27, 27);
+    margin-top: 12vh;
+    background-color: rgb(53, 56, 57);
 }
 
 .vertical-line {
-    border-left: 5px solid #ffce0a;
-    height: 35vh;
+    border-left: 10px solid #ffce0a;
+    min-height: 400px;
+    max-height: 800px;
+    height: 20vw;
     position: absolute;
-    left: 70vh;
+    margin-left: 2%;
+}
+
+.horizontal-line {
+    border-top: 10px solid #ffce0a;
+    min-width: 700px;
+    max-width: 1400px;
+    width: 35vw;
+    position: absolute;
 }
 
 .title {

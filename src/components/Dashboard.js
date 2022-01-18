@@ -97,7 +97,7 @@ const Dashboard = () => {
             } else {
                 setTimeout(() => {
                     setMoving(false);
-                }, 30);
+                }, 50);
             }
         }
     };
