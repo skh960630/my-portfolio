@@ -1,4 +1,5 @@
 import React, { useEffect, useRef } from 'react';
+import './Fades.css';
 
 import { TweenMax, Power3 } from 'gsap';
 
