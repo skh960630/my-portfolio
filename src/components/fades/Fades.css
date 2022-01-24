@@ -32,6 +32,13 @@
 }
 
 .divContact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+}
+
+.divFlipBt {
     opacity: 0;
 }
 
