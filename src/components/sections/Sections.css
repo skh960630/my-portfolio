@@ -42,6 +42,12 @@
     box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5);
     transform: rotateY(var(--rotate-y, 0));
     transform-style: preserve-3d;   
+    transition: all 1.2s ease;
+    backface-visibility: hidden;
+}
+
+.namecard-container.flip {
+    --rotate-y: 180deg;
 }
 
 .vertical-line-front {

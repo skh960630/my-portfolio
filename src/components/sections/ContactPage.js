@@ -1,14 +1,20 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 import FadeText from '../fades/FadeText';
 import FadeUnderline from '../fades/FadeUnderline';
 import FadeDiv from '../fades/FadeDiv';
 import FlipIcon from '@mui/icons-material/FlipCameraAndroid';
+import Tilt from 'react-parallax-tilt';
 
 import './Sections.css';
 
 const ContactPage = () => { 
     const [cardFlip, setCardFlip] = useState(false);
+    const [showFront, setShowFront] = useState(true);
+
+    useEffect(() => {
+        setCardFlip(false);
+    }, [cardFlip]);
 
     return (
         <div style={{ width: '90vw' }}>
@@ -18,26 +24,11 @@ const ContactPage = () => {
                 </FadeUnderline>
             </div>
             <FadeDiv delay={2.1} y='-2vh' className='divContact'>
+                <Tilt>
+                {/* <div className={`namecard-container ${cardFlip ? 'flip' : ''}`}> */}
                 {
-                    cardFlip ? (
-                        <div className='namecard-container'>
-                            <div className='vertical-line-back'>
-                            </div>
-                            <div style={{ width: '50%', paddingTop: '25%', fontSize: '38px', display: 'inline-block',
-                                        fontWeight: 'bold', fontFamily: 'Arial', textAlign: 'center' }}>
-                                Kane Shin
-                            </div>
-                            <div style={{ width: '50%', paddingTop: '25%', display: 'inline-block', textAlign: 'center' }}>
-                                <div style={{ paddingTop: '0.5%', fontSize: '20px' }}>
-                                    skh960630@gmail.com
-                                </div>
-                                <div style={{ paddingTop: '0.5%', fontSize: '20px' }}>
-                                    (+61) 0434 686 570
-                                </div>
-                            </div>
-                        </div>
-                    ) : (
-                        <div className='namecard-container'>
+                    showFront ? (
+                        <div className={`namecard-container ${cardFlip ? 'flip' : ''}`}>
                             <div className='vertical-line-front'>
                             </div>
                             <div style={{ paddingTop: '5%' }}>
@@ -53,14 +44,41 @@ const ContactPage = () => {
                                 Kane Shin
                             </div>
                         </div>
+                    ) : (
+                        <div className={`namecard-container ${cardFlip ? 'flip' : ''}`}>
+                            <div className='vertical-line-back'>
+                            </div>
+                            <div style={{ width: '50%', paddingTop: '25%',  display: 'inline-block',
+                                        fontFamily: 'Arial', textAlign: 'center' }}>
+                                <div style={{ fontSize: '38px', fontWeight: 'bold' }}>
+                                    Kane Shin
+                                </div>
+                                <div style={{ fontSize: '23px' }}>
+                                    MQ Univ.
+                                </div>
+                            </div>
+                            <div style={{ width: '50%', paddingTop: '25%', display: 'inline-block', textAlign: 'center' }}>
+                                <div style={{ paddingTop: '0.5%', fontSize: '20px' }}>
+                                    skh960630@gmail.com
+                                </div>
+                                <div style={{ paddingTop: '0.5%', fontSize: '20px' }}>
+                                    (+61) 0434 686 570
+                                </div>
+                            </div>
+                        </div>
                     )
                 }
+                {/* </div> */}
+                </Tilt>
             </FadeDiv>
             <FadeDiv delay={2.3} y='-2vh' className='divFlipBt'>
                 <div className='flip-icon'>
                     <FlipIcon 
                         fontSize='large' 
-                        onClick={() => setCardFlip(!cardFlip)}
+                        onClick={() => {
+                            setShowFront(!showFront);
+                            setCardFlip(true);
+                        }}
                     />
                 </div>
             </FadeDiv>
