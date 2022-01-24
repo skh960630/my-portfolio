@@ -31,6 +31,12 @@ const ProjectPage = () => {
                             line2="Work experience in random company"
                             line3="Work experience in random company"
                         />
+                        <ExperienceCard 
+                            title="Vaccine Passport App Project"
+                            line1="Work experience in random company"
+                            line2="Work experience in random company"
+                            line3="Work experience in random company"
+                        />
                     </div>
                 </FadeDiv>
                 <FadeDiv delay={2.5} y='-10vh' className='divProject'>
