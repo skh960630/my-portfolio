@@ -1,0 +1,76 @@
+/* Front side */
+.vertical-line-front {
+    border-left: 10px solid #ffce0a;
+    min-height: 500px;
+    max-height: 800px;
+    height: 20vw;
+    position: absolute;
+    margin-left: 5%;
+}
+
+.horizontal-line {
+    border-top: 10px solid #ffce0a;
+    min-width: 800px;
+    max-width: 1400px;
+    width: 35vw;
+    position: absolute;
+}
+
+/* Back side */
+.backcard {
+    min-width: 800px;
+    min-height: 500px;
+    max-width: 1400px;
+    max-height: 800px;
+    width: 35vw;
+    height: 20vw;
+}
+
+.backcard-container {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.backcard-box {
+    width: 100%;
+    text-align: center;
+}
+
+.vertical-line-back {
+    border-left: 7px solid #ffce0a;
+    border-radius: 5px 5px 5px 5px;
+    min-height: 250px;
+    max-height: 400px;
+    height: 10vw;
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 16%;
+}
+
+.contact-row {
+    display: flex;
+    margin-top: 5%;
+    margin-left: 22%;
+    align-items: center;
+}
+
+.contact-info {
+    display: inline-block;
+    margin-left: 5%;
+}
+
+.contact-link {
+    font-size: 20px;
+    color: white;
+}
+
+.contact-link:hover {
+    cursor: pointer;
+    color: #ffce0a;
+}
+
+a {
+    text-decoration: none;
+}
