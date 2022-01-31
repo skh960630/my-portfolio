@@ -40,9 +40,8 @@
     max-width: 1400px;
     max-height: 800px;
     width: 35vw;
-    height: 20vw;
+    height: 21vw;
     margin-top: 9vh;
-    background-color: rgb(53, 56, 57);
     box-shadow: 10px 10px 50px rgba(0, 0, 0, 0.5);
     transition: all 1.2s ease;
     transform: rotateY(var(--rotate-y, 0));

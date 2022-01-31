@@ -16,7 +16,6 @@ import './Sections.css';
 
 const ContactPage = () => { 
     const [cardFlip, setCardFlip] = useState(false);
-    const [showFront, setShowFront] = useState(true);
     const [colorPick, setColorPick] = useState(1);
 
     const flipBt = useCallback(() => {
@@ -33,12 +32,8 @@ const ContactPage = () => {
             <FadeDiv delay={2.1} y='-2vh' className='divContact'>
                 <Tilt>
                     <div className={`namecard-container ${cardFlip ? 'flip' : ''}`}>
-                    {showFront ? (
-                            <FrontCard />
-                        ) : (
-                            <BackCard />
-                        )
-                    }
+                        <FrontCard />
+                        <BackCard />
                     </div>
                 </Tilt>
             </FadeDiv>
@@ -47,10 +42,7 @@ const ContactPage = () => {
                     <FlipIcon
                         className='flip-bt-hover'
                         fontSize='large'
-                        onClick={() => {
-                            setShowFront(!showFront);
-                            flipBt();
-                        }}
+                        onClick={() => { flipBt() }}
                     />
                 </div>
             </FadeDiv>

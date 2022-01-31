@@ -8,15 +8,13 @@ const FrontCard = () => {
             <div className='vertical-line-front'>
             </div>
             <div style={{ paddingTop: '5%' }}>
-                <div style={{ marginLeft: '10%', paddingTop: '5%', paddingBottom: '5%', 
-                            fontSize: '40px', fontWeight: 'bold',  fontFamily: 'Arial' }}>
+                <div className='job-title'>
                     Frontend Developer
                 </div>
                 <div className='horizontal-line'>
                 </div>
             </div>
-            <div style={{ textAlign: 'right', paddingRight: '4%', paddingTop: '30%', fontSize: '30px', 
-                        fontWeight: 'bold',  fontStyle: 'oblique',  fontFamily: 'Arial' }}>
+            <div className='name-style'>
                 Kane Shin
             </div>
         </div>
