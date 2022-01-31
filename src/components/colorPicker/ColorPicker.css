@@ -35,9 +35,9 @@
 }
 
 .circle.selected {
-    margin-top: 4px;
-    width: 29px;
-    height: 29px;
+    margin-top: 5px;
+    width: 28px;
+    height: 28px;
 }
 
 .circle.unselected {
