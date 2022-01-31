@@ -1,4 +1,10 @@
 /* Front side */
+
+.frontCard {
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+}
+
 .vertical-line-front {
     border-left: 10px solid #ffce0a;
     min-height: 500px;
@@ -24,6 +30,9 @@
     max-height: 800px;
     width: 35vw;
     height: 20vw;
+    transform: rotateY(180deg);
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
 }
 
 .backcard-container {

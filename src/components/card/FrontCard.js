@@ -4,7 +4,7 @@ import './Card.css';
 
 const FrontCard = () => { 
     return (
-        <>
+        <div className='frontCard'>
             <div className='vertical-line-front'>
             </div>
             <div style={{ paddingTop: '5%' }}>
@@ -19,7 +19,7 @@ const FrontCard = () => {
                         fontWeight: 'bold',  fontStyle: 'oblique',  fontFamily: 'Arial' }}>
                 Kane Shin
             </div>
-        </>
+        </div>
     );
 }
 

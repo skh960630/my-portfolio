@@ -1,0 +1,47 @@
+.color-picker {
+    display: flex;
+    width: 400px;
+    height: 55px;
+    border-radius: 17px;
+    background-color: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.color-button {
+    width: 30%;
+    height: 70%;
+    border-radius: 15px;
+    display: inline-block;
+    transition: all 0.5s ease;
+}
+
+.color-button.selected {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.color-button:hover {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.circle {
+    position: relative;
+    margin-left: 3px;
+    margin-right: 3px;
+    border-radius: 50%;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+.circle.selected {
+    margin-top: 4px;
+    width: 29px;
+    height: 29px;
+}
+
+.circle.unselected {
+    margin-top: 6px;
+    width: 25px;
+    height: 25px;
+}
