@@ -31,11 +31,11 @@
     margin-right: 3px;
     border-radius: 50%;
     display: inline-block;
-    transition: all 0.3s ease;
+    transition: all 0.2s ease;
 }
 
 .circle.selected {
-    margin-top: 5px;
+    margin-top: 4.5px;
     width: 28px;
     height: 28px;
 }
