@@ -116,9 +116,6 @@ const Dashboard = () => {
     return (
         <div className="container">
             <ProgressBar progress={progress} progressColor={progressColor} />
-            <div id='sectionFour' className="section four">
-                <ContactPage />
-            </div>
             <div id='sectionOne' className="section one">
                 <IntroductionPage />
             </div>
@@ -127,6 +124,9 @@ const Dashboard = () => {
             </div>
             <div id='sectionThree' className="section three">
                 <SkillsPage />
+            </div>
+            <div id='sectionFour' className="section four">
+                <ContactPage />
             </div>
         </div>
     );
