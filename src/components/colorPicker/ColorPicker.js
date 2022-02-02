@@ -18,7 +18,7 @@ const ColorPicker = ({ colorPick, setColorPick }) => {
                     style={{ backgroundColor: '#ffce0a' }} />
                 <div 
                     className={`circle ${colorPick === 1 ? 'selected' : 'unselected'}`} 
-                    style={{ backgroundColor: 'rgb(53, 56, 57)' }} />
+                    style={{ backgroundColor: '#353839' }} />
             </div>
             <div
                 className={`color-button ${colorPick === 2 ? 'selected' : ''}`}
@@ -33,7 +33,7 @@ const ColorPicker = ({ colorPick, setColorPick }) => {
                     style={{ backgroundColor: '#ffce0a' }} />
                 <div 
                     className={`circle ${colorPick === 2 ? 'selected' : 'unselected'}`} 
-                    style={{ backgroundColor: 'rgb(53, 56, 57)' }} />
+                    style={{ backgroundColor: '#353839' }} />
             </div>
             <div
                 className={`color-button ${colorPick === 3 ? 'selected' : ''}`}
@@ -47,7 +47,7 @@ const ColorPicker = ({ colorPick, setColorPick }) => {
                     style={{ backgroundColor: '#ffce0a' }} />
                 <div 
                     className={`circle ${colorPick === 3 ? 'selected' : 'unselected'}`} 
-                    style={{ backgroundColor: 'rgb(53, 56, 57)' }} />
+                    style={{ backgroundColor: '#353839' }} />
             </div>
         </div>
     );

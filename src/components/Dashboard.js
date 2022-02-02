@@ -14,6 +14,7 @@ const Dashboard = () => {
     const [progress, setProgress] = useState(0);
     const [progressColor, setProgressColor] = useState({ barColor: "whitesmoke", backgroundColor: "#A9A9A9" });
     const [moving, setMoving] = useState(false);
+    const [contactColor, setContactColor] = useState('lightsalmon');
 
     useEffect(() => {
         window.scrollTo({ top: 0 });
@@ -125,8 +126,8 @@ const Dashboard = () => {
             <div id='sectionThree' className="section three">
                 <SkillsPage />
             </div>
-            <div id='sectionFour' className="section four">
-                <ContactPage />
+            <div id='sectionFour' className="section" style={{ background: contactColor }}>
+                <ContactPage setContactColor={setContactColor} />
             </div>
         </div>
     );

@@ -3,14 +3,12 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    background-color: rgb(53, 56, 57);
     transform-style: preserve-3d;
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
 }
 
 .vertical-line-front {
-    border-left: 10px solid #ffce0a;
     min-height: 500px;
     max-height: 800px;
     height: 21vw;
@@ -20,7 +18,6 @@
 }
 
 .horizontal-line {
-    border-top: 10px solid #ffce0a;
     min-width: 800px;
     max-width: 1400px;
     width: 35vw;
@@ -66,7 +63,6 @@
 }
 
 .vertical-line-back {
-    border-left: 7px solid #ffce0a;
     border-radius: 5px 5px 5px 5px;
     min-height: 250px;
     max-height: 400px;
@@ -78,7 +74,7 @@
 
 .contact-row {
     display: flex;
-    margin-top: 5%;
+    margin-top: 1%;
     margin-left: 22%;
     align-items: center;
 }
@@ -86,16 +82,6 @@
 .contact-info {
     display: inline-block;
     margin-left: 5%;
-}
-
-.contact-link {
-    font-size: 20px;
-    color: white;
-}
-
-.contact-link:hover {
-    cursor: pointer;
-    color: #ffce0a;
 }
 
 a {

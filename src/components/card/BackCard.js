@@ -4,12 +4,22 @@ import EmailIcon from '@mui/icons-material/Email';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 
+import styled from 'styled-components';
 import './Card.css';
 
-const BackCard = () => { 
+const BackCard = ({ colorList }) => { 
+    const HoverText = styled.p`
+        font-size: 20px;
+        color: white;
+        :hover {
+            cursor: pointer;
+            color: ${colorList.color2};
+        }
+    `;
+
     return (
-        <div className='backcard'>
-            <div className='vertical-line-back'>
+        <div className='backcard' style={{ backgroundColor: colorList.color3 }}>
+            <div className='vertical-line-back'  style={{ borderLeft: `7px solid ${colorList.color2}`}}>
             </div>
             <div className='backcard-container' style={{ float: 'left', fontFamily: 'Arial' }}>
                 <div className='backcard-box'>
@@ -26,9 +36,9 @@ const BackCard = () => {
                     <div className='contact-row'>
                         <EmailIcon fontSize='large' />
                         <div className='contact-info'>
-                            <div className='contact-link'>
+                            <HoverText>
                                 skh960630@gmail.com
-                            </div>
+                            </HoverText>
                         </div>
                     </div>
                     <div className='contact-row'>
@@ -37,9 +47,9 @@ const BackCard = () => {
                             <a href="https://www.linkedin.com/in/kane-shin-200a84139/"
                                 target="_blank"
                                 rel="noopener noreferrer">
-                                <div className='contact-link'>
+                                <HoverText>
                                     LinkedIn
-                                </div>
+                                </HoverText>
                             </a>
                         </div>
                     </div>
@@ -49,9 +59,9 @@ const BackCard = () => {
                             <a href="https://github.com/skh960630"
                                 target="_blank"
                                 rel="noopener noreferrer">
-                                <div className='contact-link'>
+                                <HoverText>
                                     Github
-                                </div>
+                                </HoverText>
                             </a>
                         </div>
                     </div>

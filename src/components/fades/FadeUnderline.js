@@ -3,7 +3,7 @@ import './Fades.css';
 
 import { TweenMax, Power3 } from 'gsap';
 
-const FadeUnderline = ({ type, delay, y = 0, children, length = 100 }) => {
+const FadeUnderline = ({ type, delay, y = 0, children, length = 100, color="#ffce0a" }) => {
     let underlineItem = useRef(null);
 
     useEffect(() => {
@@ -18,7 +18,7 @@ const FadeUnderline = ({ type, delay, y = 0, children, length = 100 }) => {
                 ease: Power3.easeOut,
                 delay,
                 opacity: 1,
-                backgroundImage: 'linear-gradient(transparent 80%, #ffce0a 20%)',
+                backgroundImage: `linear-gradient(transparent 80%, ${color} 20%)`,
                 backgroundSize: `${length}% 100%`,
                 duration: 0.6,
             }
