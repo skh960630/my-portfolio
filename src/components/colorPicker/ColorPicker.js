@@ -27,13 +27,13 @@ const ColorPicker = ({ colorPick, setColorPick }) => {
             >
                 <div 
                     className={`circle ${colorPick === 2 ? 'selected' : 'unselected'}`} 
-                    style={{ backgroundColor: 'lightsalmon' }} />
+                    style={{ backgroundColor: '#655d8a' }} />
                 <div 
                     className={`circle ${colorPick === 2 ? 'selected' : 'unselected'}`} 
-                    style={{ backgroundColor: '#ffce0a' }} />
+                    style={{ backgroundColor: '#fdceb9' }} />
                 <div 
                     className={`circle ${colorPick === 2 ? 'selected' : 'unselected'}`} 
-                    style={{ backgroundColor: '#353839' }} />
+                    style={{ backgroundColor: '#7897ab' }} />
             </div>
             <div
                 className={`color-button ${colorPick === 3 ? 'selected' : ''}`}
@@ -41,13 +41,13 @@ const ColorPicker = ({ colorPick, setColorPick }) => {
             >
                 <div 
                     className={`circle ${colorPick === 3 ? 'selected' : 'unselected'}`} 
-                    style={{ backgroundColor: 'lightsalmon' }} />
-                <div 
-                    className={`circle ${colorPick === 3 ? 'selected' : 'unselected'}`} 
-                    style={{ backgroundColor: '#ffce0a' }} />
-                <div 
-                    className={`circle ${colorPick === 3 ? 'selected' : 'unselected'}`} 
                     style={{ backgroundColor: '#353839' }} />
+                <div 
+                    className={`circle ${colorPick === 3 ? 'selected' : 'unselected'}`} 
+                    style={{ backgroundColor: '#F0E68C' }} />
+                <div 
+                    className={`circle ${colorPick === 3 ? 'selected' : 'unselected'}`} 
+                    style={{ backgroundColor: '#ff6600' }} />
             </div>
         </div>
     );

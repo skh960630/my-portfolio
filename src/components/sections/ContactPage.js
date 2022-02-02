@@ -30,15 +30,15 @@ const ContactPage = ({ setManualcolor }) => {
     const changeColor = (pick) => {
         setColorPick(pick);
         pick === 1 ? setColorList({ color1: 'lightsalmon', color2: '#ffce0a', color3: '#353839' })
-        : pick === 2 ? setColorList({ color1: 'lightsalmon', color2: '#ffce0a', color3: '#353839' })
-        : setColorList({ color1: 'lightsalmon', color2: '#ffce0a', color3: '#353839' });
+        : pick === 2 ? setColorList({ color1: '#655d8a', color2: '#fdceb9', color3: '#7897ab' })
+        : setColorList({ color1: '#353839', color2: '#F0E68C', color3: '#ff6600' });
     }
 
     return (
         <div style={{ width: '90vw' }}>
             <div className='title'>
-                <FadeUnderline type="Contact" color={colorList.color2} delay={1.5} length={15}>
-                    <FadeText text="Contact" type="ContactSubhead" delay={0.8} />
+                <FadeUnderline type="Contact" color={colorList.color2} delay={0.7} length={15}>
+                    <FadeText text="Contact" type="ContactSubhead" delay={1.5} />
                 </FadeUnderline>
             </div>
             <FadeDiv delay={2.1} y='-2vh' className='divContact'>

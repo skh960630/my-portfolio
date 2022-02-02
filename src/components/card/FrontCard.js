@@ -3,7 +3,7 @@ import React from 'react';
 import './Card.css';
 
 const FrontCard = ({ colorList }) => { 
-    console.log(colorList);
+
     return (
         <div className='frontCard' style={{ backgroundColor: colorList.color3 }}>
             <div className='vertical-line-front' style={{ borderLeft: `10px solid ${colorList.color2}` }}>
