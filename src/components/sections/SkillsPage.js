@@ -12,8 +12,8 @@ const SkillsPage = () => {
     return (
         <div style={{ width: '90vw' }}>
             <div className='title'>
-                <FadeUnderline type="Skills" delay={0.8} length={10}>
-                    <FadeText text="Skills" type="SkillsSubhead" delay={1.5} />
+                <FadeUnderline type="Skills" delay={1.5} length={10} color="#ffce0a">
+                    <FadeText text="Skills" type="SkillsSubhead" delay={0.8} />
                 </FadeUnderline>
             </div>
             <div className='skills-container'>

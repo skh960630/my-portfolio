@@ -37,8 +37,8 @@ const ContactPage = ({ setManualcolor }) => {
     return (
         <div style={{ width: '90vw' }}>
             <div className='title'>
-                <FadeUnderline type="Contact" color={colorList.color2} delay={0.7} length={15}>
-                    <FadeText text="Contact" type="ContactSubhead" delay={1.5} />
+                <FadeUnderline type="Contact" color={colorList.color2} delay={1.5} length={15}>
+                    <FadeText text="Contact" type="ContactSubhead" delay={0.8} />
                 </FadeUnderline>
             </div>
             <FadeDiv delay={2.1} y='-2vh' className='divContact'>

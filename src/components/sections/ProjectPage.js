@@ -12,8 +12,8 @@ const ProjectPage = () => {
     return (
         <div style={{ width: '90vw' }}>
             <div className='title dark-text'>
-                <FadeUnderline type="Project" delay={0.8} length={20}>
-                    <FadeText text="Experience" type="ProjectSubhead" delay={1.5} />
+                <FadeUnderline type="Project" delay={1.5} length={20} color="#ffce0a">
+                    <FadeText text="Experience" type="ProjectSubhead" delay={0.8} />
                 </FadeUnderline>
             </div>
             <div style={{ marginTop: '15vh' }}>

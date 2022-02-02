@@ -26,7 +26,7 @@ const Dashboard = () => {
     }, [currentSection]);
 
     useEffect(() => {
-        setProgressColor({ barColor: manualColor.scroll, backgroundColor: "#A9A9A9" });
+        currentSection === 4 && setProgressColor({ barColor: manualColor.scroll, backgroundColor: "#A9A9A9" });
     }, [manualColor]);
 
     // Reset the location when there is a window size change
