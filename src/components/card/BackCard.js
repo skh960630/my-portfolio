@@ -9,7 +9,7 @@ import './Card.css';
 
 const BackCard = ({ colorList }) => { 
     const HoverText = styled.p`
-        font-size: 20px;
+        font-size: 15px;
         color: white;
         :hover {
             cursor: pointer;
@@ -23,10 +23,10 @@ const BackCard = ({ colorList }) => {
             </div>
             <div className='backcard-container' style={{ float: 'left', fontFamily: 'Arial' }}>
                 <div className='backcard-box'>
-                    <div style={{ fontSize: '38px', fontWeight: 'bold' }}>
+                    <div style={{ fontSize: '33px', fontWeight: 'bold' }}>
                         Kane Shin
                     </div>
-                    <div style={{ fontSize: '23px' }}>
+                    <div style={{ fontSize: '21px' }}>
                         MQ Univ.
                     </div>
                 </div>

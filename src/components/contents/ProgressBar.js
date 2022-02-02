@@ -6,7 +6,7 @@ const ProgressBar = ({ progress, progressColor }) => {
         height: '30vh',
         width: 10,
         backgroundColor: progressColor.backgroundColor,
-        borderRadius: 40,
+        borderRadius: 2,
         marginLeft: '95vw',
         marginTop: '30vh',
     }
@@ -15,7 +15,7 @@ const ProgressBar = ({ progress, progressColor }) => {
         height: `${progress}%`,
         width: '100%',
         backgroundColor: progressColor.barColor,
-        borderRadius: 40,
+        borderRadius: 2,
         textAlign: 'right',
     }
 

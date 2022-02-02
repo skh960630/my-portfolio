@@ -18,6 +18,7 @@ const Dashboard = () => {
 
     useEffect(() => {
         window.scrollTo({ top: 0 });
+        setCurrentSection(1);
         document.body.style.overflow = "hidden";
     }, []);
 
