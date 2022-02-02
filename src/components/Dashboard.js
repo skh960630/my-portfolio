@@ -14,7 +14,7 @@ const Dashboard = () => {
     const [progress, setProgress] = useState(0);
     const [progressColor, setProgressColor] = useState({ barColor: "whitesmoke", backgroundColor: "#A9A9A9" });
     const [moving, setMoving] = useState(false);
-    const [contactColor, setContactColor] = useState('lightsalmon');
+    const [manualColor, setManualcolor] = useState({ background: 'lightsalmon', scroll: '#ffce0a' });
 
     useEffect(() => {
         window.scrollTo({ top: 0 });
@@ -83,7 +83,7 @@ const Dashboard = () => {
                         break;
                     case 4:
                         nextY = document.getElementById('sectionFour').offsetTop;
-                        setProgressColor({ barColor: "#ffce0a", backgroundColor: "#A9A9A9" });
+                        setProgressColor({ barColor: manualColor.scroll, backgroundColor: "#A9A9A9" });
                         break;
                 }
 
@@ -126,8 +126,8 @@ const Dashboard = () => {
             <div id='sectionThree' className="section three">
                 <SkillsPage />
             </div>
-            <div id='sectionFour' className="section" style={{ background: contactColor }}>
-                <ContactPage setContactColor={setContactColor} />
+            <div id='sectionFour' className="section" style={{ background: manualColor.background }}>
+                <ContactPage setManualcolor={setManualcolor} />
             </div>
         </div>
     );

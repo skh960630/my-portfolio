@@ -14,13 +14,13 @@ import Tilt from 'react-parallax-tilt';
 
 import './Sections.css';
 
-const ContactPage = ({ setContactColor }) => { 
+const ContactPage = ({ setManualcolor }) => { 
     const [cardFlip, setCardFlip] = useState(false);
     const [colorPick, setColorPick] = useState(1);
     const [colorList, setColorList] = useState({ color1: 'lightsalmon', color2: '#ffce0a', color3: '#353839' });
 
     useEffect(() => {
-        setContactColor(colorList.color1);
+        setManualcolor({ background: colorList.color1, scroll: colorList.color2 });
     }, [colorPick]);
 
     const flipBt = useCallback(() => {
