@@ -9,7 +9,6 @@ import '../App.css';
 const Dashboard = () => {
     const [windowHeight, setWindowHeight] = useState(window.innerHeight);
     const [currentSection, setCurrentSection] = useState(1);
-    const [currentHeight, setCurrentHeight] = useState(0);
     const [scrollTrigger, setScrollTrigger] = useState(0);
     const [progress, setProgress] = useState(0);
     const [progressColor, setProgressColor] = useState({ barColor: "whitesmoke", backgroundColor: "#A9A9A9" });
@@ -50,7 +49,6 @@ const Dashboard = () => {
                     break;
             }
 
-            setCurrentHeight(offsetTop);
             setScrollTrigger(0);
             setWindowHeight(window.innerHeight);
 
@@ -58,15 +56,31 @@ const Dashboard = () => {
         }
     }
 
+    const switchScrollTo = (deltaY) => {
+        const direction = deltaY >= 0 ? 1 : -1;
+        const delta = Math.abs(deltaY);
+
+        if (delta > 0 && delta < 100) {
+            return 1 * direction;
+        } else if (delta >= 100 && delta < 200) {
+            return 2 * direction;
+        } else if (delta >= 200 && delta < 300) {
+            return 3 * direction;
+        } else if (delta >= 300) {
+            return 4 * direction;
+        }
+
+        return 0;
+    }
+
     // Check if the page needs to be switched
     const checkScroll = (event) => {
         if (!moving) {
             // Make the scroll slower
-            const scrollTo = document.documentElement.scrollTop+(event.deltaY/20);
+            const scrollTo = document.documentElement.scrollTop+switchScrollTo(event.deltaY);
 
             window.scrollTo({ top: scrollTo });
-            setScrollTrigger(scrollTo-currentHeight);
-            setMoving(true);
+            setScrollTrigger(scrollTrigger+switchScrollTo(event.deltaY));
 
             // Move to next slide if the scroll is at a certain point
             if (document.documentElement.scrollTop > 0 && Math.abs(scrollTrigger) > 40) {
@@ -94,16 +108,12 @@ const Dashboard = () => {
 
                 setScrollTrigger(0);
                 setCurrentSection(nextSection);
-                setCurrentHeight(nextY);
+                setMoving(true);
 
                 window.scrollTo({ top: nextY, behavior: 'smooth' });
                 setTimeout(() => {
                     setMoving(false);
                 }, 2000);
-            } else {
-                setTimeout(() => {
-                    setMoving(false);
-                }, 40);
             }
         }
     };
@@ -117,7 +127,7 @@ const Dashboard = () => {
             window.removeEventListener('wheel', checkScroll);
             window.removeEventListener('resize', handleResize);
         }
-    }, [moving, scrollTrigger, currentHeight]);
+    }, [moving, scrollTrigger]);
 
     return (
         <div className="container">
