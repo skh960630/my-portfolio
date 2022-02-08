@@ -56,6 +56,7 @@ const Dashboard = () => {
         }
     }
 
+    // Switch the scroll power
     const switchScrollTo = (deltaY) => {
         const direction = deltaY >= 0 ? 1 : -1;
         const delta = Math.abs(deltaY);
