@@ -3,7 +3,7 @@ import IntroductionPage from './sections/IntroductionPage';
 import SkillsPage from './sections/SkillsPage';
 import ProjectPage from './sections/ProjectPage';
 import ContactPage from './sections/ContactPage';
-import ProgressBar from './contents/ProgressBar';
+import ProgressBar from './progressbar/ProgressBar';
 import '../App.css';
 
 const Dashboard = () => {

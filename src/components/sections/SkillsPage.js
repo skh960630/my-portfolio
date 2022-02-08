@@ -3,7 +3,7 @@ import React from 'react';
 import FadeText from '../fades/FadeText';
 import FadeUnderline from '../fades/FadeUnderline';
 import FadeDiv from '../fades/FadeDiv';
-import SkillBar from '../contents/SkillBar';
+import SkillBar from '../skills/SkillBar';
 
 import './Sections.css';
 

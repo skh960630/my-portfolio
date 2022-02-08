@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Contents.css';
+import './SkillBar.css';
 
 const SkillBar = ({ name, gauge }) => {
     const gaugeBar = {

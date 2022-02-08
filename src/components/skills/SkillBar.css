@@ -1,0 +1,15 @@
+.barContainer {
+    width: 100%;
+    height: 1.8vh;
+    background-color: white;
+    border-radius: 10px;
+    margin: 2vh;
+}
+
+.Skillbar {
+    transition: all 0.4s ease;
+}
+
+.Skillbar:hover {
+    transform: scale(1.05); 
+}
