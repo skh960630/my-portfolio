@@ -25,6 +25,7 @@ const ProjectPage = () => {
                             line2="ReactJS Frontend Development."
                             line3="NodeJS Backend Development."
                             color="#0492c2"
+                            skills={[['React', 70], ['JavaScript', 110], ['MySQL', 80], ['NodeJS', 85]]}
                         />
                         <ExperienceCard 
                             title="My Portfolio Project"
@@ -32,14 +33,15 @@ const ProjectPage = () => {
                             line2="GSAP JavaScript Animation Platform."
                             gitURL="https://github.com/skh960630/my-portfolio"
                             color="#fc6a03"
+                            skills={[['React', 70], ['JavaScript', 110]]}
                         />
                         <ExperienceCard 
                             title="Vaccine Passport App Project"
                             line1="University Thesis Project for honours."
                             line2="Developed using React Native for Android and IOS mobile App."
-                            line3="Provides Vaccine Passport and Covid location sevices."
                             gitURL="https://github.com/skh960630/CovidApp"
                             color="#2e5984"
+                            skills={[['React Native', 125], ['JavaScript', 110], ['Firebase', 95], ['Material-UI', 110]]}
                         />
                     </div>
                 </FadeDiv>
@@ -52,6 +54,7 @@ const ProjectPage = () => {
                             line3="Firebase to manage the backend process."
                             gitURL="https://github.com/AeroX2/service-barter-comp4050"
                             color="#03ac13"
+                            skills={[['React', 70], ['JavaScript', 110], ['Firebase', 95], ['Material-UI', 110]]}
                         />
                         <ExperienceCard 
                             title="ACM ICPC Competition"
@@ -59,6 +62,7 @@ const ProjectPage = () => {
                             line2="South Pacific Region 2017 & 2019 Divisional Contest."
                             gitURL="https://github.com/skh960630/UVa-Online-Judge"
                             color="#e95c5e"
+                            skills={[['JAVA', 66]]}
                         />
                         <ExperienceCard 
                             title="Budget For Children Software Program"
@@ -66,6 +70,7 @@ const ProjectPage = () => {
                             line2="Leading colleagues in PHP Frontend development."
                             gitURL="https://github.com/skh960630/BfC"
                             color="#565656"
+                            skills={[['PHP', 60]]}
                         />
                     </div>
                 </FadeDiv>
