@@ -16,15 +16,6 @@
     align-items: center;
 }
 
-.image-container {
-    position: relative;
-    height: 20T;
-    width: 30%;
-    margin-left: 7%;
-    top: 10vh;
-    opacity: 0;
-}
-
 /* Skill section CSS */
 .skills-container {
     display: block;
