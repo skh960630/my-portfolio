@@ -37,6 +37,12 @@
   }
 }
 
+body { 
+  overflow-y: scroll;
+}
+
+/* Section distribution */
+
 .section {
   width: 100vw;
   height: 100vh;

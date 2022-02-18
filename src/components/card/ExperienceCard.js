@@ -5,7 +5,7 @@ import SkillCircle from './SkillCircle';
 import styled from 'styled-components';
 import './Card.css';
 
-const ExperienceCard = ({ title, line1, line2, line3, gitURL, color, skills }) => {
+const ExperienceCard = ({ title, line1, line2, line3, gitURL, color, skills, date }) => {
     const HoverText = styled.p`
         font-size: 1vw;
         color: rgb(80, 80, 80);
@@ -16,7 +16,12 @@ const ExperienceCard = ({ title, line1, line2, line3, gitURL, color, skills }) =
     `;
 
     return (
-        <div className='Experience-Card' style={{ borderColor: color }}>
+        <fieldset className='Experience-Card' style={{ borderColor: color }}>
+            <legend>
+                <div className='date' style={{ color }}>
+                    {date}
+                </div>
+            </legend>
             <div style={{ padding: '2%' }}>
                 <div style={{ fontSize: '1.1vw', fontWeight: 'bold', color }}>
                     {title}
@@ -56,7 +61,7 @@ const ExperienceCard = ({ title, line1, line2, line3, gitURL, color, skills }) =
                     </div>
                 }
             </div>
-        </div>
+        </fieldset>
     )
 }
 

@@ -26,6 +26,7 @@ const ProjectPage = () => {
                             line3="NodeJS Backend Development."
                             color="#0492c2"
                             skills={[['React', 70], ['JavaScript', 110], ['MySQL', 80], ['NodeJS', 85]]}
+                            date="2022.01 - 2022.02"
                         />
                         <ExperienceCard 
                             title="My Portfolio Project"
@@ -34,6 +35,7 @@ const ProjectPage = () => {
                             gitURL="https://github.com/skh960630/my-portfolio"
                             color="#fc6a03"
                             skills={[['React', 70], ['JavaScript', 110]]}
+                            date="2021.12 - 2022.02"
                         />
                         <ExperienceCard 
                             title="Vaccine Passport App Project"
@@ -42,6 +44,7 @@ const ProjectPage = () => {
                             gitURL="https://github.com/skh960630/CovidApp"
                             color="#2e5984"
                             skills={[['React Native', 125], ['JavaScript', 110], ['Firebase', 95], ['Material-UI', 110]]}
+                            date="2022.01 - 2022.02"
                         />
                     </div>
                 </FadeDiv>
@@ -55,6 +58,7 @@ const ProjectPage = () => {
                             gitURL="https://github.com/AeroX2/service-barter-comp4050"
                             color="#03ac13"
                             skills={[['React', 70], ['JavaScript', 110], ['Firebase', 95], ['Material-UI', 110]]}
+                            date="2022.01 - 2022.02"
                         />
                         <ExperienceCard 
                             title="ACM ICPC Competition"
@@ -63,6 +67,7 @@ const ProjectPage = () => {
                             gitURL="https://github.com/skh960630/UVa-Online-Judge"
                             color="#e95c5e"
                             skills={[['JAVA', 66]]}
+                            date="2022.01 - 2022.02"
                         />
                         <ExperienceCard 
                             title="Budget For Children Software Program"
@@ -71,6 +76,7 @@ const ProjectPage = () => {
                             gitURL="https://github.com/skh960630/BfC"
                             color="#565656"
                             skills={[['PHP', 60]]}
+                            date="2022.01 - 2022.02"
                         />
                     </div>
                 </FadeDiv>
