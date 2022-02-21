@@ -17,15 +17,7 @@ import './Sections.css';
 const ContactPage = ({ setManualcolor }) => { 
     const [cardFlip, setCardFlip] = useState(false);
     const [colorPick, setColorPick] = useState(1);
-    const [colorList, setColorList] = useState({ color1: '', color2: '', color3: '' });
-
-    useEffect(() => {
-        setColorList({ color1: 'lightsalmon', color2: '#ffce0a', color3: '#353839' });
-    }, []);
-
-    useEffect(() => {
-        setManualcolor({ background: colorList.color1, scroll: colorList.color2 });
-    }, [colorPick]);
+    const [colorList, setColorList] = useState({ color1: 'lightsalmon', color2: '#ffce0a', color3: '#353839' });
 
     const flipBt = useCallback(() => {
         setCardFlip(!cardFlip);
@@ -33,9 +25,21 @@ const ContactPage = ({ setManualcolor }) => {
 
     const changeColor = (pick) => {
         setColorPick(pick);
-        pick === 1 ? setColorList({ color1: 'lightsalmon', color2: '#ffce0a', color3: '#353839' })
-        : pick === 2 ? setColorList({ color1: '#655d8a', color2: '#fdceb9', color3: '#7897ab' })
-        : setColorList({ color1: '#353839', color2: '#F0E68C', color3: '#ff6600' });
+
+        switch (pick) {
+            case 1:
+                setColorList({ color1: 'lightsalmon', color2: '#ffce0a', color3: '#353839' });
+                setManualcolor({ background: 'lightsalmon', scroll: '#ffce0a' });
+                break;
+            case 2:
+                setColorList({ color1: '#655d8a', color2: '#fdceb9', color3: '#7897ab' })
+                setManualcolor({ background: '#655d8a', scroll: '#fdceb9' });
+                break;
+            case 3:
+                setColorList({ color1: '#353839', color2: '#F0E68C', color3: '#ff6600' });
+                setManualcolor({ background: '#353839', scroll: '#F0E68C' });
+                break;
+        }
     }
 
     return (
