@@ -28,37 +28,12 @@ const Dashboard = () => {
     }, [currentSection]);
 
     useEffect(() => {
-        currentSection === 4 && setProgressColor({ barColor: manualColor.scroll, backgroundColor: "#A9A9A9" });
-    }, [manualColor]);
-
-    // Reset the location when there is a window size change
-    const handleResize = () => {
-        if (windowHeight !== window.innerHeight) {
-            let offsetTop = null;
-
-            switch (currentSection) {
-                case 1:
-                    offsetTop = document.getElementById('sectionOne').offsetTop;
-                    break;
-                case 2:
-                    offsetTop = document.getElementById('sectionTwo').offsetTop;
-                    break;
-                case 3:
-                    offsetTop = document.getElementById('sectionThree').offsetTop;
-                    break;
-                case 4:
-                    offsetTop = document.getElementById('sectionFour').offsetTop;
-                    break;
-                default:
-                    break;
-            }
-
-            setScrollTrigger(0);
-            setWindowHeight(window.innerHeight);
-
-            window.scrollTo({ top: offsetTop });
+        function changeProgressColor() {
+            currentSection === 4 && setProgressColor({ barColor: manualColor.scroll, backgroundColor: "#A9A9A9" });
         }
-    }
+
+        changeProgressColor();
+    }, [manualColor]);
 
     // Switch the scroll power
     const switchScrollTo = (deltaY) => {
@@ -127,6 +102,35 @@ const Dashboard = () => {
 
     // Manually change scroll event
     useEffect(() => {
+        // Reset the location when there is a window size change
+        const handleResize = () => {
+            if (windowHeight !== window.innerHeight) {
+                let offsetTop = null;
+
+                switch (currentSection) {
+                    case 1:
+                        offsetTop = document.getElementById('sectionOne').offsetTop;
+                        break;
+                    case 2:
+                        offsetTop = document.getElementById('sectionTwo').offsetTop;
+                        break;
+                    case 3:
+                        offsetTop = document.getElementById('sectionThree').offsetTop;
+                        break;
+                    case 4:
+                        offsetTop = document.getElementById('sectionFour').offsetTop;
+                        break;
+                    default:
+                        break;
+                }
+
+                setScrollTrigger(0);
+                setWindowHeight(window.innerHeight);
+
+                window.scrollTo({ top: offsetTop });
+            }
+        }
+
         window.addEventListener('wheel', checkScroll, { passive: true });
         window.addEventListener('resize', handleResize);
           

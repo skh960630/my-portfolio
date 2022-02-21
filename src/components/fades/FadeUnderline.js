@@ -7,21 +7,24 @@ const FadeUnderline = ({ type, delay, y = 0, children, length = 100, color }) =>
     let underlineItem = useRef(null);
 
     useEffect(() => {
-        TweenMax.to(
-            underlineItem,
-            {
-                scrollTrigger: {
-                    trigger: '.'+underlineItem.className,
-                    toggleActions: 'restart reset restart reset',
-                },
-                y,
-                ease: Power3.easeOut,
-                delay,
-                opacity: 1,
-                backgroundSize: `${length}% 100%`,
-                duration: 0.6,
-            }
-        );
+        function runFadeUnderline() {
+            TweenMax.to(
+                underlineItem,
+                {
+                    scrollTrigger: {
+                        trigger: '.'+underlineItem.className,
+                        toggleActions: 'restart reset restart reset',
+                    },
+                    y,
+                    ease: Power3.easeOut,
+                    delay,
+                    opacity: 1,
+                    backgroundSize: `${length}% 100%`,
+                    duration: 0.6,
+                }
+            );
+        }
+        runFadeUnderline();
     }, [color]);
 
     return (

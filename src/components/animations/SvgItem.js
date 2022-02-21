@@ -8,20 +8,23 @@ const SvgItem = ({ delay, y }) => {
     let svgImage = useRef(null);
 
     useEffect(() => {
-        TweenMax.to(
-            svgImage,
-            2,
-            {
-                scrollTrigger: {
-                    trigger: '.'+svgImage.className,
-                    toggleActions: 'restart reset restart reset',
-                },
-                y,
-                ease: 'elastic.out',
-                delay,
-                opacity: 1,
-            }
-        );
+        function runSVG () {
+            TweenMax.to(
+                svgImage,
+                2,
+                {
+                    scrollTrigger: {
+                        trigger: '.'+svgImage.className,
+                        toggleActions: 'restart reset restart reset',
+                    },
+                    y,
+                    ease: 'elastic.out',
+                    delay,
+                    opacity: 1,
+                }
+            );
+        }
+        runSVG();
     }, []);
 
     return (
