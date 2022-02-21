@@ -16,17 +16,17 @@ const ProjectPage = () => {
                     <FadeText text="Experience" type="ProjectSubhead" delay={0.8} />
                 </FadeUnderline>
             </div>
-            <div style={{ marginTop: '15vh' }}>
+            <div style={{ marginTop: '11vh' }}>
                 <FadeDiv delay={2} y='-10vh' className='divProject'>
                     <div style={{ display: 'flex', justifyContent: 'center' }}>
                         <ExperienceCard 
                             title="Life Skills Group - Frontend Internship"
-                            line1="Australia's Edutech Start up Company."
+                            line1="Australia's Edutech Start up Company - Part time Position."
                             line2="ReactJS Frontend Development."
                             line3="NodeJS Backend Development."
                             color="#0492c2"
                             skills={[['React', 70], ['JavaScript', 110], ['MySQL', 80], ['NodeJS', 85]]}
-                            date="2022.01 - 2022.02"
+                            date="2020.03 - Current"
                         />
                         <ExperienceCard 
                             title="My Portfolio Project"
@@ -44,7 +44,7 @@ const ProjectPage = () => {
                             gitURL="https://github.com/skh960630/CovidApp"
                             color="#2e5984"
                             skills={[['React Native', 125], ['JavaScript', 110], ['Firebase', 95], ['Material-UI', 110]]}
-                            date="2022.01 - 2022.02"
+                            date="2022.08 - 2021.11"
                         />
                     </div>
                 </FadeDiv>
@@ -58,7 +58,7 @@ const ProjectPage = () => {
                             gitURL="https://github.com/AeroX2/service-barter-comp4050"
                             color="#03ac13"
                             skills={[['React', 70], ['JavaScript', 110], ['Firebase', 95], ['Material-UI', 110]]}
-                            date="2022.01 - 2022.02"
+                            date="2020.07 - 2020.11"
                         />
                         <ExperienceCard 
                             title="ACM ICPC Competition"
@@ -67,7 +67,7 @@ const ProjectPage = () => {
                             gitURL="https://github.com/skh960630/UVa-Online-Judge"
                             color="#e95c5e"
                             skills={[['JAVA', 66]]}
-                            date="2022.01 - 2022.02"
+                            date="2017.10 & 2019.09"
                         />
                         <ExperienceCard 
                             title="Budget For Children Software Program"
@@ -76,7 +76,7 @@ const ProjectPage = () => {
                             gitURL="https://github.com/skh960630/BfC"
                             color="#565656"
                             skills={[['PHP', 60]]}
-                            date="2022.01 - 2022.02"
+                            date="2019.02 - 2019.06"
                         />
                     </div>
                 </FadeDiv>

@@ -37,13 +37,13 @@ const ExperienceCard = ({ title, line1, line2, line3, gitURL, color, skills, dat
                         </div>
                     )
                 }
-                <div style={{ fontSize: '1vw', marginTop: '4%' }}>
+                <div style={{ fontSize: '1vw', marginTop: '4%', color }}>
                     {line1}
                 </div>
-                <div style={{ fontSize: '1vw', marginTop: '1%' }}>
+                <div style={{ fontSize: '1vw', marginTop: '1%', color }}>
                     {line2}
                 </div>
-                <div style={{ fontSize: '1vw', marginTop: '1%' }}>
+                <div style={{ fontSize: '1vw', marginTop: '1%', color }}>
                     {line3}
                 </div>
                 {gitURL &&
