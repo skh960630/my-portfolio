@@ -49,6 +49,8 @@ const Dashboard = () => {
                 case 4:
                     offsetTop = document.getElementById('sectionFour').offsetTop;
                     break;
+                default:
+                    break;
             }
 
             setScrollTrigger(0);
@@ -106,6 +108,8 @@ const Dashboard = () => {
                     case 4:
                         nextY = document.getElementById('sectionFour').offsetTop;
                         setProgressColor({ barColor: manualColor.scroll, backgroundColor: "#A9A9A9" });
+                        break;
+                    default:
                         break;
                 }
 

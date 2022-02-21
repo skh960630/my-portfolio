@@ -39,6 +39,8 @@ const ContactPage = ({ setManualcolor }) => {
                 setColorList({ color1: '#353839', color2: '#F0E68C', color3: '#ff6600' });
                 setManualcolor({ background: '#353839', scroll: '#F0E68C' });
                 break;
+            default:
+                break;
         }
     }
 
