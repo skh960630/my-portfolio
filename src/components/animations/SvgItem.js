@@ -17,7 +17,7 @@ const SvgItem = ({ delay, y }) => {
                     toggleActions: 'restart reset restart reset',
                 },
                 y,
-                ease: Power3.easeOut,
+                ease: 'elastic.out',
                 delay,
                 opacity: 1,
             }
