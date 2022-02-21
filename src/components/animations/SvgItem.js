@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import BookImage from './BookImage';
 
-import { TweenMax, Power3 } from 'gsap';
+import { TweenMax } from 'gsap';
 import './Svg.css';
 
 const SvgItem = ({ delay, y }) => {
