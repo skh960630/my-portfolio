@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import IntroductionPage from './sections/IntroductionPage';
 import SkillsPage from './sections/SkillsPage';
 import ProjectPage from './sections/ProjectPage';

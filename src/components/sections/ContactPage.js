@@ -17,7 +17,11 @@ import './Sections.css';
 const ContactPage = ({ setManualcolor }) => { 
     const [cardFlip, setCardFlip] = useState(false);
     const [colorPick, setColorPick] = useState(1);
-    const [colorList, setColorList] = useState({ color1: 'lightsalmon', color2: '#ffce0a', color3: '#353839' });
+    const [colorList, setColorList] = useState({ color1: '', color2: '', color3: '' });
+
+    useEffect(() => {
+        setColorList({ color1: 'lightsalmon', color2: '#ffce0a', color3: '#353839' });
+    }, []);
 
     useEffect(() => {
         setManualcolor({ background: colorList.color1, scroll: colorList.color2 });
