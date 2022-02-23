@@ -28,8 +28,8 @@ const Dashboard = () => {
     }, [currentSection]);
 
     useEffect(() => {
-        setProgressColor({ barColor: manualColor.scroll, backgroundColor: "#A9A9A9" });
-    }, [manualColor]);
+        currentSection === 4 && setProgressColor({ barColor: manualColor.scroll, backgroundColor: "#A9A9A9" });
+    }, [manualColor, currentSection]);
 
     // Switch the scroll power
     const switchScrollTo = (deltaY) => {
