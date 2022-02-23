@@ -16,10 +16,10 @@ const Dashboard = () => {
     const [manualColor, setManualcolor] = useState({ background: 'lightsalmon', scroll: '#ffce0a' });
 
     useEffect(() => {
-        window.scrollTo({ top: 0 });
         setCurrentSection(1);
         setScrollTrigger(0);
         setWindowHeight(0);
+        window.scrollTo({ top: 0, behavior: 'smooth' });
         document.body.style.overflow = "hidden";
     }, []);
 
@@ -84,49 +84,49 @@ const Dashboard = () => {
                         break;
                 }
 
-                setScrollTrigger(0);
-                setCurrentSection(nextSection);
                 setMoving(true);
 
                 window.scrollTo({ top: nextY, behavior: 'smooth' });
+                setCurrentSection(nextSection);
                 setTimeout(() => {
+                    setScrollTrigger(0);
                     setMoving(false);
                 }, 2000);
             }
         }
     };
 
+    // Reset the location when there is a window size change
+    const handleResize = () => {
+        if (windowHeight !== window.innerHeight) {
+            let offsetTop = null;
+
+            switch (currentSection) {
+                case 1:
+                    offsetTop = document.getElementById('sectionOne').offsetTop;
+                    break;
+                case 2:
+                    offsetTop = document.getElementById('sectionTwo').offsetTop;
+                    break;
+                case 3:
+                    offsetTop = document.getElementById('sectionThree').offsetTop;
+                    break;
+                case 4:
+                    offsetTop = document.getElementById('sectionFour').offsetTop;
+                    break;
+                default:
+                    break;
+            }
+
+            setScrollTrigger(0);
+            setWindowHeight(window.innerHeight);
+
+            window.scrollTo({ top: offsetTop });
+        }
+    }
+
     // Manually change scroll event
     useEffect(() => {
-        // Reset the location when there is a window size change
-        const handleResize = () => {
-            if (windowHeight !== window.innerHeight) {
-                let offsetTop = null;
-
-                switch (currentSection) {
-                    case 1:
-                        offsetTop = document.getElementById('sectionOne').offsetTop;
-                        break;
-                    case 2:
-                        offsetTop = document.getElementById('sectionTwo').offsetTop;
-                        break;
-                    case 3:
-                        offsetTop = document.getElementById('sectionThree').offsetTop;
-                        break;
-                    case 4:
-                        offsetTop = document.getElementById('sectionFour').offsetTop;
-                        break;
-                    default:
-                        break;
-                }
-
-                setScrollTrigger(0);
-                setWindowHeight(window.innerHeight);
-
-                window.scrollTo({ top: offsetTop });
-            }
-        }
-
         window.addEventListener('wheel', checkScroll, { passive: true });
         window.addEventListener('resize', handleResize);
           
@@ -134,7 +134,7 @@ const Dashboard = () => {
             window.removeEventListener('wheel', checkScroll);
             window.removeEventListener('resize', handleResize);
         }
-    }, [moving, scrollTrigger]);
+    }, [moving, scrollTrigger, checkScroll, handleResize]);
 
     return (
         <div className="container">
