@@ -138,7 +138,7 @@ const Dashboard = () => {
             window.removeEventListener('wheel', checkScroll);
             window.removeEventListener('resize', handleResize);
         }
-    }, [moving, scrollTrigger]);
+    }, [moving, scrollTrigger, windowHeight, currentSection, manualColor]);
 
     return (
         <div className="container">
