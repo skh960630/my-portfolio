@@ -23,7 +23,7 @@ const Dashboard = () => {
         setTimeout(() => {
             setScrollTrigger(0);
             setMoving(false);
-        }, 2000);
+        }, 1000);
         document.body.style.overflow = "hidden";
     }, []);
 
@@ -65,7 +65,7 @@ const Dashboard = () => {
                 setScrollTrigger(scrollTrigger+switchScrollTo(event.deltaY));
 
                 // Move to next slide if the scroll is at a certain point
-                if (document.documentElement.scrollTop > 0 && Math.abs(scrollTrigger) > 20) {
+                if (document.documentElement.scrollTop > 0 && Math.abs(scrollTrigger) > 10) {
                     const nextSection = scrollTrigger > 0 ? currentSection + 1 : currentSection - 1;
 
                     let nextY = null;
@@ -97,7 +97,7 @@ const Dashboard = () => {
                     setTimeout(() => {
                         setScrollTrigger(0);
                         setMoving(false);
-                    }, 2000);
+                    }, 1000);
                 }
             }
         };
