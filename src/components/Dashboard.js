@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useCallback } from 'react';
+import React, { useState, useEffect } from 'react';
 import IntroductionPage from './sections/IntroductionPage';
 import SkillsPage from './sections/SkillsPage';
 import ProjectPage from './sections/ProjectPage';
@@ -15,10 +15,6 @@ const Dashboard = () => {
     const [moving, setMoving] = useState(false);
     const [manualColor, setManualcolor] = useState({ background: 'lightsalmon', scroll: '#ffce0a' });
 
-    const changeProgress = useCallback(() => {
-        currentSection === 4 && setProgressColor({ barColor: manualColor.scroll, backgroundColor: "#A9A9A9" });
-    });
-
     useEffect(() => {
         window.scrollTo({ top: 0 });
         setCurrentSection(1);
@@ -32,7 +28,7 @@ const Dashboard = () => {
     }, [currentSection]);
 
     useEffect(() => {
-        changeProgress();
+        setProgressColor({ barColor: manualColor.scroll, backgroundColor: "#A9A9A9" });
     }, [manualColor]);
 
     // Switch the scroll power
