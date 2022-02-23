@@ -66,7 +66,11 @@ const Dashboard = () => {
 
                 // Move to next slide if the scroll is at a certain point
                 if (document.documentElement.scrollTop > 0 && Math.abs(scrollTrigger) > 10) {
-                    const nextSection = scrollTrigger > 0 ? currentSection + 1 : currentSection - 1;
+                    let nextSection = scrollTrigger > 0 ? currentSection + 1 : currentSection - 1;
+                    
+                    if (nextSection > 4 || nextSection < 1) {
+                        nextSection = currentSection;
+                    }
 
                     let nextY = null;
                     switch (nextSection) {
