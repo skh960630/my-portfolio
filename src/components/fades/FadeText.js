@@ -7,23 +7,20 @@ const FadeText = ({ type, delay, text, y = 0 }) => {
     let textItems = useRef(null);
 
     useEffect(() => {
-        function runFadeText() {
-            TweenMax.to(
-                textItems,
-                {
-                    scrollTrigger: {
-                        trigger: '.'+textItems.className,
-                        toggleActions: 'restart reset restart reset',
-                    },
-                    y,
-                    ease: Power3.easeOut,
-                    delay,
-                    opacity: 1,
-                }
-            );
-        }
-        runFadeText();
-    }, []);
+        TweenMax.to(
+            textItems,
+            {
+                scrollTrigger: {
+                    trigger: '.'+textItems.className,
+                    toggleActions: 'restart reset restart reset',
+                },
+                y,
+                ease: Power3.easeOut,
+                delay,
+                opacity: 1,
+            }
+        );
+    }, [delay, y]);
      
     return (
         <>
