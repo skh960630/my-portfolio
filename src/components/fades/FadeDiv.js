@@ -20,7 +20,7 @@ const FadeDiv = ({ delay, children, y = 0, className }) => {
                 opacity: 1,
             }
         );
-    }, [delay, y]);
+    }, [delay, y, className]);
 
     return (
         <>

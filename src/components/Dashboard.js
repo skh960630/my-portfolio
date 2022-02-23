@@ -76,11 +76,11 @@ const Dashboard = () => {
                             break;
                         case 2:
                             nextY = document.getElementById('sectionTwo').offsetTop;
-                            setProgressColor({ barColor: "whitesmoke", backgroundColor: "#A9A9A9" });
+                            setProgressColor({ barColor: "#505050", backgroundColor: "#A9A9A9" });
                             break;
                         case 3:
                             nextY = document.getElementById('sectionThree').offsetTop;
-                            setProgressColor({ barColor: "#505050", backgroundColor: "#A9A9A9" });
+                            setProgressColor({ barColor: "whitesmoke", backgroundColor: "#A9A9A9" });
                             break;
                         case 4:
                             nextY = document.getElementById('sectionFour').offsetTop;
@@ -147,10 +147,10 @@ const Dashboard = () => {
                 <IntroductionPage />
             </div>
             <div id='sectionTwo' className="section two">
-                <SkillsPage />
+                <ProjectPage />
             </div>
             <div id='sectionThree' className="section three">
-                <ProjectPage />
+                <SkillsPage />
             </div>
             <div id='sectionFour' className="section" style={{ background: manualColor.background }}>
                 <ContactPage setManualcolor={setManualcolor} />

@@ -22,7 +22,7 @@ const FadeUnderline = ({ type, delay, y = 0, children, length = 100, color }) =>
                 duration: 0.6,
             }
         );
-    }, [color, delay, y]);
+    }, [color, delay, y, length]);
 
     return (
         <div 
