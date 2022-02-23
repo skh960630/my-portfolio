@@ -44,7 +44,7 @@ const ProjectPage = () => {
                             gitURL="https://github.com/skh960630/CovidApp"
                             color="#2e5984"
                             skills={[['React Native', 125], ['JavaScript', 110], ['Firebase', 95], ['Material-UI', 110]]}
-                            date="2022.08 - 2021.11"
+                            date="2021.08 - 2021.11"
                         />
                     </div>
                 </FadeDiv>
