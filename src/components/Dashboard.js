@@ -16,10 +16,14 @@ const Dashboard = () => {
     const [manualColor, setManualcolor] = useState({ background: 'lightsalmon', scroll: '#ffce0a' });
 
     useEffect(() => {
-        setCurrentSection(1);
-        setScrollTrigger(0);
+        setMoving(true);
         setWindowHeight(0);
         window.scrollTo({ top: 0, behavior: 'smooth' });
+        setCurrentSection(1);
+        setTimeout(() => {
+            setScrollTrigger(0);
+            setMoving(false);
+        }, 2000);
         document.body.style.overflow = "hidden";
     }, []);
 
@@ -49,84 +53,84 @@ const Dashboard = () => {
         return 0;
     }
 
-    // Check if the page needs to be switched
-    const checkScroll = (event) => {
-        if (!moving) {
-            // Make the scroll slower
-            const scrollTo = document.documentElement.scrollTop+switchScrollTo(event.deltaY);
+    // Manually change scroll event
+    useEffect(() => {
+        // Check if the page needs to be switched
+        const checkScroll = (event) => {
+            if (!moving) {
+                // Make the scroll slower
+                const scrollTo = document.documentElement.scrollTop+switchScrollTo(event.deltaY);
 
-            window.scrollTo({ top: scrollTo });
-            setScrollTrigger(scrollTrigger+switchScrollTo(event.deltaY));
+                window.scrollTo({ top: scrollTo });
+                setScrollTrigger(scrollTrigger+switchScrollTo(event.deltaY));
 
-            // Move to next slide if the scroll is at a certain point
-            if (document.documentElement.scrollTop > 0 && Math.abs(scrollTrigger) > 20) {
-                const nextSection = scrollTrigger > 0 ? currentSection + 1 : currentSection - 1;
+                // Move to next slide if the scroll is at a certain point
+                if (document.documentElement.scrollTop > 0 && Math.abs(scrollTrigger) > 20) {
+                    const nextSection = scrollTrigger > 0 ? currentSection + 1 : currentSection - 1;
 
-                let nextY = null;
-                switch (nextSection) {
+                    let nextY = null;
+                    switch (nextSection) {
+                        case 1:
+                            nextY = document.getElementById('sectionOne').offsetTop;
+                            setProgressColor({ barColor: "whitesmoke", backgroundColor: "#A9A9A9" });
+                            break;
+                        case 2:
+                            nextY = document.getElementById('sectionTwo').offsetTop;
+                            setProgressColor({ barColor: "whitesmoke", backgroundColor: "#A9A9A9" });
+                            break;
+                        case 3:
+                            nextY = document.getElementById('sectionThree').offsetTop;
+                            setProgressColor({ barColor: "#505050", backgroundColor: "#A9A9A9" });
+                            break;
+                        case 4:
+                            nextY = document.getElementById('sectionFour').offsetTop;
+                            setProgressColor({ barColor: manualColor.scroll, backgroundColor: "#A9A9A9" });
+                            break;
+                        default:
+                            break;
+                    }
+
+                    setMoving(true);
+
+                    window.scrollTo({ top: nextY, behavior: 'smooth' });
+                    setCurrentSection(nextSection);
+                    setTimeout(() => {
+                        setScrollTrigger(0);
+                        setMoving(false);
+                    }, 2000);
+                }
+            }
+        };
+
+        // Reset the location when there is a window size change
+        const handleResize = () => {
+            if (windowHeight !== window.innerHeight) {
+                let offsetTop = null;
+
+                switch (currentSection) {
                     case 1:
-                        nextY = document.getElementById('sectionOne').offsetTop;
-                        setProgressColor({ barColor: "whitesmoke", backgroundColor: "#A9A9A9" });
+                        offsetTop = document.getElementById('sectionOne').offsetTop;
                         break;
                     case 2:
-                        nextY = document.getElementById('sectionTwo').offsetTop;
-                        setProgressColor({ barColor: "whitesmoke", backgroundColor: "#A9A9A9" });
+                        offsetTop = document.getElementById('sectionTwo').offsetTop;
                         break;
                     case 3:
-                        nextY = document.getElementById('sectionThree').offsetTop;
-                        setProgressColor({ barColor: "#505050", backgroundColor: "#A9A9A9" });
+                        offsetTop = document.getElementById('sectionThree').offsetTop;
                         break;
                     case 4:
-                        nextY = document.getElementById('sectionFour').offsetTop;
-                        setProgressColor({ barColor: manualColor.scroll, backgroundColor: "#A9A9A9" });
+                        offsetTop = document.getElementById('sectionFour').offsetTop;
                         break;
                     default:
                         break;
                 }
 
-                setMoving(true);
+                setScrollTrigger(0);
+                setWindowHeight(window.innerHeight);
 
-                window.scrollTo({ top: nextY, behavior: 'smooth' });
-                setCurrentSection(nextSection);
-                setTimeout(() => {
-                    setScrollTrigger(0);
-                    setMoving(false);
-                }, 2000);
+                window.scrollTo({ top: offsetTop });
             }
         }
-    };
 
-    // Reset the location when there is a window size change
-    const handleResize = () => {
-        if (windowHeight !== window.innerHeight) {
-            let offsetTop = null;
-
-            switch (currentSection) {
-                case 1:
-                    offsetTop = document.getElementById('sectionOne').offsetTop;
-                    break;
-                case 2:
-                    offsetTop = document.getElementById('sectionTwo').offsetTop;
-                    break;
-                case 3:
-                    offsetTop = document.getElementById('sectionThree').offsetTop;
-                    break;
-                case 4:
-                    offsetTop = document.getElementById('sectionFour').offsetTop;
-                    break;
-                default:
-                    break;
-            }
-
-            setScrollTrigger(0);
-            setWindowHeight(window.innerHeight);
-
-            window.scrollTo({ top: offsetTop });
-        }
-    }
-
-    // Manually change scroll event
-    useEffect(() => {
         window.addEventListener('wheel', checkScroll, { passive: true });
         window.addEventListener('resize', handleResize);
           
@@ -134,7 +138,7 @@ const Dashboard = () => {
             window.removeEventListener('wheel', checkScroll);
             window.removeEventListener('resize', handleResize);
         }
-    }, [moving, scrollTrigger, checkScroll, handleResize]);
+    }, [moving, scrollTrigger]);
 
     return (
         <div className="container">
