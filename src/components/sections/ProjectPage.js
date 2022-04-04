@@ -26,7 +26,7 @@ const ProjectPage = () => {
                             line3="NodeJS Backend Development."
                             color="#0492c2"
                             skills={[['React', 70], ['JavaScript', 110], ['MySQL', 80], ['NodeJS', 85]]}
-                            date="2020.03 - Current"
+                            date="2020.03 - 2022.03"
                         />
                         <ExperienceCard 
                             title="My Portfolio Project"
